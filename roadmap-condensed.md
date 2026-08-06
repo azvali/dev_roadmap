@@ -598,7 +598,7 @@ Surface: `/api/v1/bikes` CRUD · `/bikes/:id/maintenance` CRUD, cursor-paginated
 
 ### Week 30 — Window functions + performance
 
-- **Mon (2h):** **window functions** (the interview separator): `OVER (PARTITION BY … ORDER BY …)` · ROW_NUMBER/RANK/LAG/LEAD · running totals · mental model: aggregate _without collapsing rows_ · compute "rides ranked by distance per bike" + "month-over-month cost delta"
+- **Mon (2h):** **window functions** (the interview separator): `OVER (PARTITION BY … ORDER BY …)` · ROW*NUMBER/RANK/LAG/LEAD · running totals · mental model: aggregate \_without collapsing rows* · compute "rides ranked by distance per bike" + "month-over-month cost delta"
 - **Tue (2h):** EXPLAIN deeply: seq vs index vs bitmap heap scan · nested loop vs hash vs merge join · estimated vs actual rows (bad estimates = bad plans) · take 3 queries slow → fast, record plans
 - **Thu (2h):** indexing strategy from plans: partial, covering (`INCLUDE`), GIN for `jsonb` · when an index hurts · why the planner ignores yours — add only what query patterns justify
 - **Fri:** teach-it — read an EXPLAIN aloud
@@ -655,7 +655,7 @@ Repos on Postgres, services untouched (screenshot) · `part_usages` junction wit
   - **The Rosetta Stone** — map every Entra concept you already use to the spec: app registration = OAuth client · the redirect dance = authorization-code flow + PKCE · scopes/consent = scopes · **ID token (OIDC — who you are)** vs **access token (OAuth — what you may call)** · Entra's keys = JWKS
   - Annotate Microsoft's auth-code-flow doc with "I've configured this part" notes — your bridge artifact
 - **Tue (2h):**
-  - **Implement the core once:** build the redirect URL (client_id, redirect_uri, `state`, PKCE challenge) → callback verifies `state` → exchange code + verifier **server-side** → fetch profile → upsert user → create _your_ session
+  - **Implement the core once:** build the redirect URL (client*id, redirect_uri, `state`, PKCE challenge) → callback verifies `state` → exchange code + verifier **server-side** → fetch profile → upsert user → create \_your* session
   - The punchline: **OAuth outsources identification; your session still runs the show**
 - **Thu (2h):** now use a service, like the job: wire **Auth.js or Clerk** into MotoLog — email/password + GitHub sign-in converging on one identity · name exactly what the library automated from Tuesday
 - **Fri:** teach-it — **the Entra narration to camera** (it's a gate item; record until fluent)
