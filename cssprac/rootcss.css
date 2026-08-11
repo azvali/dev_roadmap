@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #ffffff;
+  --border-thickness: 1px;
+  --border-style: solid;
+  --border-color: #e0e0e0;
+  --card-title-color: #0055ff;
+  --card-meta: #6b6b6b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --border-color: rgb(37, 37, 37);
+    --card-title-color: #010d27;
+    --card-meta: #231f1f;
+  }
+}
+
+.card__title { color: var(--card-title-color); }
+.card__meta  { color: var(--card-meta); }
