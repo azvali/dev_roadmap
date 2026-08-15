@@ -20,7 +20,6 @@ header {
   background-color: var(--primary-color);
   position: sticky;
   top: 0;
-  border: solid 5px green;
 }
 
 header img {
@@ -32,7 +31,6 @@ header img {
 header nav {
   height: 100%;
   width: 100%;
-  border: solid 5px red;
 }
 
 header nav ul {
@@ -50,7 +48,6 @@ header nav ul {
 header nav ul a {
   text-decoration: none;
   color: white;
-  border: solid;
 }
 
 header nav ul a:hover {
@@ -72,6 +69,7 @@ main {
 
 main h1 {
   text-align: center;
+  color: white;
   width: 100%;
 }
 main h1 {
@@ -129,9 +127,54 @@ main img {
   margin: 10px 30px;
 }
 
-.gear_container {
+.gear_container section {
+  margin: 50px;
   display: grid;
+  align-items: center;
+  gap: 50px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.gear_container h2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.gear_container section article {
+  background-color: white;
+  border-radius: 20px;
+  min-height: 500px;
+  max-height: 700px;
+}
+
+.gear_container section article figure {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.gear_container section article figure h3 {
+  width: 100%;
+  min-height: 50px;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gear_container section article figure img {
+  align-self: flex-start;
+}
+
+.gear_container section article figure figcaption {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }
 
 @media (min-width: 538px) {
